@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonz MC Coin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #000, #1a1a1a);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1a1a1a;
+            padding: 20px 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            max-width: 80px;
+        }
+        header .language-selector {
+            display: flex;
+            gap: 10px;
+        }
+        header .language-selector button {
+            background: #00ff00;
+            border: none;
+            color: #000;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .hero {
+            padding: 50px 20px;
+            background: url('background.jpg') no-repeat center center / cover;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .hero a {
+            padding: 15px 30px;
+            background-color: #00ff00;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hero a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 255, 0, 0.5);
+        }
+        .section {
+            margin: 20px auto;
+            padding: 30px 20px;
+            text-align: center;
+            background: rgba(26, 26, 26, 0.9);
+            border-radius: 10px;
+            width: 90%;
+        }
+        .section h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        .section p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .section a {
+            display: block;
+            margin: 10px auto;
+            padding: 15px 30px;
+            background-color: #00ff00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            width: 60%;
+            font-size: 16px;
+            box-shadow: 0px 5px 10px rgba(0, 255, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .section a:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 8px 20px rgba(0, 255, 0, 0.5);
+        }
+        iframe {
+            width: 90%;
+            height: 250px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #00ff00;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Bonz MC Coin Logo">
+        <div class="language-selector">
+            <button onclick="changeLanguage('ru')">RU</button>
+            <button onclick="changeLanguage('en')">EN</button>
+            <button onclick="changeLanguage('de')">DE</button>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1 id="hero-title">Bonz MC Coin</h1>
+        <p id="hero-description">Мем-коин для фанатов хип-хопа и криптовалюты</p>
+        <a href="https://t.me/blum/app?startapp=memepadjetton_BONEZ187_bECX7-ref_IGcJyVsYbq" id="buy-token">Купить токен</a>
+    </div>
+
+    <div class="section" id="about-section">
+        <h2 id="about-title">О проекте</h2>
+        <p id="about-description">Bonz MC Coin создан на платформе Blum для объединения поклонников музыки и криптовалюты. Этот токен вдохновлен духом уличной культуры и хип-хопа.</p>
+    </div>
+
+    <div class="section" id="video-section">
+        <h2 id="video-title">Видео Bonz MC</h2>
+        <iframe src="https://www.youtube.com/embed/FbERoG3O-Us" frameborder="0" allowfullscreen></iframe>
+        <a href="https://www.youtube.com/@CrhymeTV" id="watch-more">Посмотреть больше на YouTube</a>
+    </div>
+
+    <div class="section" id="store-section">
+        <h2 id="store-title">Магазин 187 Strassenbande</h2>
+        <p id="store-description">Одежда и аксессуары от 187 Strassenbande. Выглядите, как Bonz MC!</p>
+        <a href="https://www.187-strassenbande.de/" id="buy-merch">Купить мерч</a>
+    </div>
+
+    <div class="section" id="community-section">
+        <h2 id="community-title">Сообщество</h2>
+        <a href="https://t.me/+VYqIv6z2cJoOcL9J" id="community-telegram">Telegram</a>
+        <a href="https://x.com/BonezMc187ers" id="community-twitter">Twitter</a>
+        <a href="https://www.instagram.com/bonez187erz/" id="community-instagram">Instagram</a>
+    </div>
+
+    <footer>
+        <p>© 2024 Bonz MC Coin. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ru: {
+                heroTitle: "Bonz MC Coin",
+                heroDescription: "Мем-коин для фанатов хип-хопа и криптовалюты",
+                buyToken: "Купить токен",
+                aboutTitle: "О проекте",
+                aboutDescription: "Bonz MC Coin создан на платформе Blum для объединения поклонников музыки и криптовалюты. Этот токен вдохновлен духом уличной культуры и хип-хопа.",
+                videoTitle: "Видео Bonz MC",
+                watchMore: "Посмотреть больше на YouTube",
+                storeTitle: "Магазин 187 Strassenbande",
+                storeDescription: "Одежда и аксессуары от 187 Strassenbande. Выглядите, как Bonz MC!",
+                buyMerch: "Купить мерч",
+                communityTitle: "Сообщество",
+                communityTelegram: "Telegram",
+                communityTwitter: "Twitter",
+                communityInstagram: "Instagram"
+            },
+            en: {
+                heroTitle: "Bonz MC Coin",
+                heroDescription: "The meme coin for hip-hop and crypto fans",
+                buyToken: "Buy Token",
+                aboutTitle: "About the Project",
+                aboutDescription: "Bonz MC Coin was created on the Blum platform to unite music and crypto fans. This token is inspired by the spirit of street culture and hip-hop.",
+                videoTitle: "Bonz MC Videos",
+                watchMore: "Watch More on YouTube",
+                storeTitle: "187 Strassenbande Store",
+                storeDescription: "Clothing and accessories from 187 Strassenbande. Look like Bonz MC!",
+                buyMerch: "Buy Merch",
+                communityTitle: "Community",
+                communityTelegram: "Telegram",
+                communityTwitter: "Twitter",
+                communityInstagram: "Instagram"
+            },
+            de: {
+                heroTitle: "Bonz MC Coin",
+                heroDescription: "Der Meme-Coin für Hip-Hop- und Krypto-Fans",
+                buyToken: "Token kaufen",
+                aboutTitle: "Über das Projekt",
+                aboutDescription: "Bonz MC Coin wurde auf der Blum-Plattform erstellt, um Musik- und Kryptofans zu vereinen. Dieser Token ist vom Geist der Straßenkultur und des Hip-Hops inspiriert.",
+                videoTitle: "Bonz MC Videos",
+                watchMore: "Mehr auf YouTube ansehen",
+                storeTitle: "187 Strassenbande Shop",
+                storeDescription: "Kleidung und Accessoires von 187 Strassenbande. Sieh aus wie Bonz MC!",
+                buyMerch: "Merch kaufen",
+                communityTitle: "Community",
+                communityTelegram: "Telegram",
+                communityTwitter: "Twitter",
+                communityInstagram: "Instagram"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.getElementById('hero-title').innerText = translations[lang].heroTitle;
+            document.getElementById('hero-description').innerText = translations[lang].heroDescription;
+            document.getElementById('buy-token').innerText = translations[lang].buyToken;
+            document.getElementById('about-title').innerText = translations[lang].aboutTitle;
+            document.getElementById('about-description').innerText = translations[lang].aboutDescription;
+            document.getElementById('video-title').innerText = translations[lang].videoTitle;
+            document.getElementById('watch-more').innerText = translations[lang].watchMore;
+            document.getElementById('store-title').innerText = translations[lang].storeTitle;
+            document.getElementById('store-description').innerText = translations[lang].storeDescription;
+            document.getElementById('buy-merch').innerText = translations[lang].buyMerch;
+            document.getElementById('community-title').innerText = translations[lang].communityTitle;
+            document.getElementById('community-telegram').innerText = translations[lang].communityTelegram;
+            document.getElementById('community-twitter').innerText = translations[lang].communityTwitter;
+            document.getElementById('community-instagram').innerText = translations[lang].communityInstagram;
+        }
+    </script>
+</body>
+</html>

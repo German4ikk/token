@@ -1,219 +1,612 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dancing Pedro Coin - мем-коин, который заставляет танцевать.">
-    <meta name="keywords" content="Dancing Pedro, мем-коин, криптовалюта, веселье, танцы">
-    <title>Dancing Pedro Coin</title>
+    <meta name="description" content="SIUU Token — криптовалюта, вдохновленная Криштиану Роналду. Присоединяйтесь к нашему сообществу!">
+    <meta name="keywords" content="SIUU Token, криптовалюта, мем-коин, Роналду, футбол, крипта, блокчейн">
+    <title>SIUU Token</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #000, #1a1a1a);
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        header {
-            background-color: #1a1a1a;
-            padding: 20px 10px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header img {
-            max-width: 80px;
-        }
-        header .language-selector {
-            display: flex;
-            gap: 10px;
-        }
-        header .language-selector button {
-            background: #ffdd00;
-            border: none;
-            color: #000;
-            padding: 10px 15px;
-            cursor: pointer;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .hero {
-            padding: 50px 20px;
-            background: url('dancing_pedro_bg.jpg') no-repeat center center / cover;
-            text-align: center;
-            color: #fff;
-        }
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 20px;
-        }
-        .hero a {
-            padding: 15px 30px;
-            background-color: #ffdd00;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            box-shadow: 0px 5px 10px rgba(255, 221, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .hero a:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 8px 20px rgba(255, 221, 0, 0.5);
-        }
-        .section {
-            margin: 20px auto;
-            padding: 30px 20px;
-            text-align: center;
-            background: rgba(26, 26, 26, 0.9);
-            border-radius: 10px;
-            width: 90%;
-        }
-        .section h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
-        }
-        .section p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-        .section a {
-            display: block;
-            margin: 10px auto;
-            padding: 15px 30px;
-            background-color: #
-ffdd00;
-            color: #000;
-            text-decoration: none;
-            border-radius: 5px;
-            width: 60%;
-            font-size: 16px;
-            box-shadow: 0px 5px 10px rgba(255, 221, 0, 0.3);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .section a:hover {
-            transform: scale(1.1);
-            box-shadow: 0px 8px 20px rgba(255, 221, 0, 0.5);
-        }
-        iframe {
-            width: 90%;
-            height: 250px;
-            margin: 20px auto;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
-        }
-        footer {
-            background-color: #1a1a1a;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        footer a {
-            color: #ffdd00;
-            text-decoration: none;
-        }
+        /* Общие настройки и стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Уменьшен отступ */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2em; /* Уменьшен размер шрифта */
+    color: #00acee;
+    font-family: 'Pacifico', cursive;
+    white-space: nowrap; /* Запрещено переноса текста */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст не вмещается */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em; /* Уменьшен размер шрифта */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Запрещено переноса текста */
+}
+
+header nav a:hover {
+    color: #1da1f2;
+}
+
+/* Блок героя с фоном */
+.hero {
+    height: 100vh;
+    background: url('https://media.giphy.com/media/HLFT2TJWh7jssTLB2W/giphy.gif') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Уменьшен размер шрифта */
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.4em; /* Уменьшен размер шрифта */
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-btn {
+    margin-top: 20px;
+    background: #00acee;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+.cta-btn:hover {
+    background-color: #1da1f2;
+    transform: scale(1.1);
+}
+
+section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    color: #00acee;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+iframe {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+}
+
+footer {
+    padding: 30px 20px;
+    background: #1e1e1e;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.2em;
+}
+
+/* Дорожная карта */
+#roadmap {
+    background-color: #1e1e1e;
+    padding: 50px 20px;
+}
+
+#roadmap h2 {
+    font-size: 2.5em;
+    color: #00acee;
+    margin-bottom: 30px;
+}
+
+#roadmap ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#roadmap ul li {
+    font-size: 1.2em;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Уменьшен размер шрифта для мобильных устройств */
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    iframe {
+        width: 90%;
+        height: 300px;
+    }
+
+    /* Настройка фона для мобильных устройств */
+    .hero {
+        background-size: contain;
+        background-position: center center;
+    }
+
+    /* Уменьшаем высоту блока hero на мобильных */
+    .hero {
+        height: 60vh;
+    }
+
+    /* Переключатель языка */
+    #language-switcher {
+        font-size: 1.5em;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    header .logo {
+        font-size: 1.5em; /* Уменьшен размер шрифта для мобильных */
+    }
+
+    header nav a {
+        font-size: 1em; /* Уменьшен размер шрифта для мобильных */
+        margin: 0 10px;
+  }
+  
+  /* Основные стили для кнопок социальных сетей */
+.social-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+}
+
+/* Стили для кнопки Twitter */
+.twitter-btn {
+    background-color: #1da1f2; /* Цвет фона для Twitter */
+}
+
+.twitter-btn:hover {
+    background-color: #0d8de0; /* Темный цвет при наведении */
+}
+
+/* Стили для кнопки Telegram */
+.telegram-btn {
+    background-color: #0088cc; /* Цвет фона для Telegram */
+}
+
+.telegram-btn:hover {
+    background-color: #006fa2; /* Темный цвет при наведении */
+}
+   }/* Общие настройки и стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0; /* Уменьшен отступ */
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+header .logo {
+    text-align: center;
+    font-size: 2em; /* Уменьшен размер шрифта */
+    color: #00acee;
+    font-family: 'Pacifico', cursive;
+    white-space: nowrap; /* Запрещено переноса текста */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Добавляет многоточие, если текст не вмещается */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1em; /* Уменьшен размер шрифта */
+    transition: color 0.3s ease;
+    white-space: nowrap; /* Запрещено переноса текста */
+}
+
+header nav a:hover {
+    color: #1da1f2;
+}
+
+/* Блок героя с фоном */
+.hero {
+    height: 100vh;
+    background: url('https://media.giphy.com/media/HLFT2TJWh7jssTLB2W/giphy.gif') center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em; /* Уменьшен размер шрифта */
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.4em; /* Уменьшен размер шрифта */
+    color: #fff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-btn {
+    margin-top: 20px;
+    background: #00acee;
+    color: white;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 2;
+}
+
+.cta-btn:hover {
+    background-color: #1da1f2;
+    transform: scale(1.1);
+}
+
+/* Основные стили для кнопок социальных сетей */
+.social-btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: #fff;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Добавляем тень */
+}
+
+/* Стили для кнопки Twitter */
+.chat-btn {
+    background-color: #1da1f2; /* Цвет фона для Twitter */
+}
+
+.chat-btn:hover {
+    background-color: #0d8de0; /* Темный цвет при наведении */
+}
+
+/* Стили для кнопки Telegram */
+.telegram-btn {
+    background-color: #0088cc; /* Цвет фона для Telegram */
+}
+
+.telegram-btn:hover {
+    background-color: #006fa2; /* Темный цвет при наведении */
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* Уменьшен размер шрифта для мобильных устройств */
+    }
+
+    .cta-btn {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+
+    iframe {
+        width: 90%;
+        height: 300px;
+    }
+
+    /* Настройка фона для мобильных устройств */
+    .hero {
+        background-size: contain;
+        background-position: center center;
+    }
+
+    /* Уменьшаем высоту блока hero на мобильных */
+    .hero {
+        height: 60vh;
+    }
+
+    /* Переключатель языка */
+    #language-switcher {
+        font-size: 1.5em;
+        cursor: pointer;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        z-index: 1000;
+    }
+
+    header .logo {
+        font-size: 1.5em; /* Уменьшен размер шрифта для мобильных */
+    }
+
+    header nav a {
+        font-size: 1em; /* Уменьшен размер шрифта для мобильных */
+        margin: 0 10px;
+    }
+}
+
+
     </style>
 </head>
 <body>
+    <!-- Переключатель языка -->
+    <button id="language-switcher">🌐</button>
+
+    <!-- Шапка -->
     <header>
-        <img src="dancing_pedro_logo.png" alt="Dancing Pedro Coin Logo">
-        <div class="language-selector">
-            <button onclick="changeLanguage('ru')">RU</button>
-            <button onclick="changeLanguage('en')">EN</button>
-            <button onclick="changeLanguage('de')">DE</button>
-        </div>
+        <div class="logo" id="logo">SIUU Token</div>
+        <nav>
+            <a href="#about" id="about-link">О проекте</a>
+            <a href="#videos" id="videos-link">Видео</a>
+            <a href="#community" id="community-link">Сообщество</a>
+            <a href="#roadmap" id="roadmap-link">Дорожная карта</a> <!-- Добавлена ссылка на Roadmap -->
+        </nav>
     </header>
 
-    <div class="hero">
-        <h1 id="hero-title">Dancing Pedro Coin</h1>
-        <p id="hero-description">Мем-коин, который заставляет всех танцевать!</p>
-        <a href="https://t.me/blum/app?startapp=memepadjetton_PEDRO_hEllU-ref_IGcJyVsYbq" id="buy-token">Купить токен</a>
-    </div>
+    <!-- Блок героя -->
+    <section class="hero">
+        <h1 id="hero-title">SIUU Token</h1>
+        <p id="hero-desc">Мем-коин, вдохновленный легендарным Криштиану Роналду!</p>
+        <a href="https://t.me/blum/app?startapp=memepadjetton_SIUU_lJMSc-ref_woZdAdRvhH" class="cta-btn" id="cta-btn" target="_blank">Купить токен</a>
+    </section>
 
-    <div class="section" id="about-section">
-        <h2 id="about-title">О проекте</h2>
-        <p id="about-description">Dancing Pedro Coin создан, чтобы принести радость, танцы и немного крипто-веселья. Вдохновлено духом движения и позитива!</p>
-    </div>
+    <!-- Секция "О проекте" -->
+    <section id="about">
+        <h2 id="about-heading">О проекте</h2>
+        <p id="about-desc">SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!</p>
+    </section>
 
-    <div class="section" id="video-section">
-        <h2 id="video-title">Видео Dancing Pedro</h2>
-        <iframe src="https://www.youtube.com/embed/RXKabdUBiWM" frameborder="0" allowfullscreen></iframe>
-        <a href="https://www.youtube.com/@davincij15" id="watch-more">Посмотреть больше на YouTube</a>
-    </div>
+    <!-- Секция "Видео" -->
+    <section id="videos">
+        <h2 id="videos-heading">Видео о проекте</h2>
+        <iframe src="https://www.youtube.com/embed/ozhwIfluBOY" allowfullscreen></iframe>
+    </section>
 
-    <div class="section" id="community-section">
-        <h2 id="community-title">Сообщество</h2>
-        <a href="https://t.me/veloprotocol/1" id="community-telegram">Telegram</a>
-        <a href="https://twitter.com/DancingPedro" id="community-twitter">Twitter</a>
-        <a href="https://www.instagram.com/dancingpedro/" id="community-instagram">Instagram</a>
-    </div>
+    <!-- Сообщество -->
+    <section id="community">
+        <h2 id="community-heading">Сообщество</h2>
+        <p id="community-desc">Присоединяйтесь к нам в Telegram и Twitter!</p>
+    <div>
+        <!-- Button for Chat Community -->
+        <a href="https://t.me/siuuCommunitytg" target="_blank" class="social-btn chat-btn">Chat Community</a>
 
+        <!-- Button for Telegram channel -->
+        <a href="https://t.me/game_doc" target="_blank" class="social-btn telegram-btn">Telegram</a>
+    </div>
+    </section>
+
+    <!-- Дорожная карта -->
+    <section id="roadmap">
+        <h2 id="roadmap-heading">Дорожная карта</h2>
+        <ul id="roadmap-list">
+            <li>1-й квартал 2024: Запуск проекта SIUU Token</li>
+            <li>2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами</li>
+            <li>3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях</li>
+            <li>4-й квартал 2024: Обновления и расширение функционала проекта</li>
+        </ul>
+    </section>
+
+    <!-- Футер -->
     <footer>
-        <p>© 2024 Dancing Pedro Coin. Все права защищены.</p>
+        <p>&copy; 2024 SIUU Token. Все права защищены.</p>
     </footer>
 
     <script>
+        const languageSwitcher = document.getElementById('language-switcher');
+
         const translations = {
-            ru: {
-                heroTitle: "Dancing Pedro Coin",
-                heroDescription: "Мем-коин, который заставляет всех танцевать!",
-                buyToken: "Купить токен",
-                aboutTitle: "О проекте",
-                aboutDescription: "Dancing Pedro Coin создан, чтобы принести радость, танцы и немного крипто-веселья. Вдохновлено духом движения и позитива!",
-                videoTitle: "Видео Dancing Pedro",
-                watchMore: "Посмотреть больше на YouTube",
-                communityTitle: "Сообщество",
-                communityTelegram: "Telegram",
-                communityTwitter: "Twitter",
-                communityInstagram: "Instagram"
+            "ru": {
+                "about-link": "О проекте",
+                "videos-link": "Видео",
+                "community-link": "Сообщество",
+                "roadmap-link": "Дорожная карта",
+                "hero-title": "SIUU Token",
+                "hero-desc": "Мем-коин, вдохновленный легендарным Криштиану Роналду!",
+                "cta-btn": "Купить токен",
+                "about-heading": "О проекте",
+                "about-desc": "SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!",
+                "videos-heading": "Видео о проекте",
+                "community-heading": "Сообщество",
+                "community-desc": "Присоединяйтесь к нам в Telegram и Twitter!",
+                "roadmap-heading": "Дорожная карта",
+                "roadmap-list": [
+                    "1-й квартал 2024: Запуск проекта SIUU Token",
+                    "2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами",
+                    "3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях",
+                    "4-й квартал 2024: Обновления и расширение функционала проекта"
+                ]
             },
-            en: {
-                heroTitle: "Dancing Pedro Coin",
-                heroDescription: "The meme coin that gets everyone dancing!",
-                buyToken: "Buy Token",
-                aboutTitle: "About the Project",
-                aboutDescription: "Dancing Pedro Coin was created to bring joy, dancing, and some crypto fun. Inspired by the spirit of movement and positivity!",
-                videoTitle: "Dancing Pedro Videos",
-                watchMore: "Watch More on YouTube",
-                communityTitle: "Community",
-                communityTelegram: "Telegram",
-                communityTwitter: "Twitter",
-                communityInstagram: "Instagram"
-            },
-            de: {
-                heroTitle: "Dancing Pedro Coin",
-                heroDescription: "Der Meme-Coin, der alle zum Tanzen bringt!",
-                buyToken: "Token kaufen",
-                aboutTitle: "Über das Projekt",
-                aboutDescription: "Dancing Pedro Coin wurde geschaffen, um Freude, Tanzen und ein bisschen Krypto-Spaß zu bringen. Inspiriert vom Geist der Bewegung und Positivität!",
-                videoTitle: "Dancing Pedro Videos",
-                watchMore: "Mehr auf YouTube ansehen",
-                communityTitle: "Community",
-                communityTelegram: "Telegram",
-                communityTwitter: "Twitter",
-                communityInstagram: "Instagram"
+            "en": {
+                "about-link": "About Project",
+                "videos-link": "Videos",
+                "community-link": "Community",
+                "roadmap-link": "Roadmap",
+                "hero-title": "SIUU Token",
+                "hero-desc": "A meme coin inspired by the legendary Cristiano Ronaldo!",
+                "cta-btn": "Buy Token",
+                "about-heading": "About the Project",
+                "about-desc": "SIUU Token combines cryptocurrency and football spirit. This meme coin is made for fans of Cristiano Ronaldo who want to be part of something big!",
+                "videos-heading": "Videos about the Project",
+                "community-heading": "Community",
+                "community-desc": "Join us on Telegram and Twitter!",
+                "roadmap-heading": "Roadmap",
+                "roadmap-list": [
+                    "Q1 2024: SIUU Token Project Launch",
+                    "Q2 2024: Community growth and partnership with crypto exchanges",
+                    "Q3 2024: Marketing strategy and increasing presence on social media",
+                    "Q4 2024: Updates and expanding project features"
+                ]
             }
         };
 
-        function changeLanguage(lang) {
-            document.getElementById('hero-title').innerText = translations[lang].heroTitle;
-            document.getElementById('hero-description').innerText = translations[lang].heroDescription;
-            document.getElementById('buy-token').innerText = translations[lang].buyToken;
-            document.getElementById('about-title').innerText = translations[lang].aboutTitle;
-            document.getElementById('about-description').innerText = translations[lang].aboutDescription;
-            document.getElementById('video-title').innerText = translations[lang].videoTitle;
-            document.getElementById('watch-more').innerText = translations[lang].watchMore;
-            document.getElementById('community-title').innerText = translations[lang].communityTitle;
-            document.getElementById('community-telegram').innerText = translations[lang].communityTelegram;
-            document.getElementById('community-twitter').innerText = translations[lang].communityTwitter;
-            document.getElementById('community-instagram').innerText = translations[lang].communityInstagram;
+        let currentLanguage = "ru";
+
+        function switchLanguage() {
+            currentLanguage = currentLanguage === "ru" ? "en" : "ru";
+
+            // Update all elements based on current language
+            for (const [key, value] of Object.entries(translations[currentLanguage])) {
+                if (Array.isArray(value)) {
+                    const list = document.getElementById(key);
+                    list.innerHTML = '';
+                    value.forEach(item => {
+                        const li = document.createElement('li');
+                        li.textContent = item;
+                        list.appendChild(li);
+                    });
+                } else {
+                    document.getElementById(key).textContent = value;
+                }
+            }
         }
+
+        languageSwitcher.addEventListener('click', switchLanguage);
     </script>
 </body>
 </html>

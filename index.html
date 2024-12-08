@@ -209,11 +209,6 @@ footer p {
         height: 60vh;
     }
 
-	.header {
-    word-wrap: break-word; /* Разбивает длинные слова */
-    word-break: break-all; /* Разбивает слово в любом месте, если оно не помещается */
-   }
-
     /* Переключатель языка */
     #language-switcher {
         font-size: 1.5em;
@@ -285,6 +280,10 @@ body {
     background-color: #121212;
     color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+.header {
+    word-wrap: break-word; /* Разбивает длинные слова */
+    word-break: break-all; /* Разбивает слово в любом месте, если оно не помещается */
 }
 
 header {
@@ -492,6 +491,7 @@ header nav a:hover {
         <div class="logo" id="logo">SIUU Token</div>
         <nav>
             <a href="#about" id="about-link">О проекте</a>
+            <a href="#videos" id="videos-link">Видео</a>
             <a href="#community" id="community-link">Сообщество</a>
             <a href="#roadmap" id="roadmap-link">Дорожная карта</a> <!-- Добавлена ссылка на Roadmap -->
         </nav>
@@ -511,10 +511,13 @@ header nav a:hover {
     </section>
 
     <!-- Секция "Видео" -->
-    <div style="max-width: 100%; overflow: hidden; text-align: center;">
-    <iframe src="https://giphy.com/embed/er6rPfsGuH41GTzRDa" width="100%" height="auto" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-    <p><a href="https://giphy.com/gifs/er6rPfsGuH41GTzRDa">via GIPHY</a></p>
-</div>
+    <section id="videos">
+        <h2 id="videos-heading">Видео о проекте</h2>
+        <video width="600" height="400" autoplay loop muted>
+        <source src="SIUU.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео тег.
+        </video>
+    </section>
 
 
     <!-- Сообщество -->
@@ -607,7 +610,7 @@ header nav a:hover {
                 "- Запуск реферальной программы для членов сообщества."
             ],
             "about-link": "О проекте",
-            "videos-link": "",
+            "videos-link": "Видео",
             "community-link": "Сообщество",
             "roadmap-link": "Дорожная карта",
             "hero-title": "SIUU Token",

@@ -469,6 +469,10 @@ header nav a:hover {
         font-size: 1em; /* Уменьшен размер шрифта для мобильных */
         margin: 0 10px;
     }
+	
+	video {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -505,8 +509,12 @@ header nav a:hover {
     <!-- Секция "Видео" -->
     <section id="videos">
         <h2 id="videos-heading">Видео о проекте</h2>
-        <iframe src="https://www.youtube.com/embed/ozhwIfluBOY" allowfullscreen></iframe>
+        <video width="600" height="400" autoplay loop muted>
+        <source src="SIUU.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео тег.
+        </video>
     </section>
+
 
     <!-- Сообщество -->
     <section id="community">
@@ -522,91 +530,187 @@ header nav a:hover {
     </section>
 
     <!-- Дорожная карта -->
-    <section id="roadmap">
-        <h2 id="roadmap-heading">Дорожная карта</h2>
-        <ul id="roadmap-list">
-            <li>1-й квартал 2024: Запуск проекта SIUU Token</li>
-            <li>2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами</li>
-            <li>3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях</li>
-            <li>4-й квартал 2024: Обновления и расширение функционала проекта</li>
-        </ul>
-    </section>
+<section id="roadmap">
+    <h2 id="roadmap-heading">Дорожная карта</h2>
+    <ul id="roadmap-list">
+        <li id="roadmap-item-1">Этап 1: Создание сообщества</li>
+        <li id="roadmap-item-1-1">- Создание официальных каналов в социальных сетях.</li>
+        <li id="roadmap-item-1-2">- Запуск первой кампании по привлечению подписчиков и формированию первоначального сообщества.</li>
 
-    <!-- Футер -->
-    <footer>
-        <p>&copy; 2024 SIUU Token. Все права защищены.</p>
-    </footer>
+        <li id="roadmap-item-2">Этап 2: Честный запуск монеты на мемпаде Блюма</li>
+        <li id="roadmap-item-2-1">- Подготовка всех необходимых материалов и документации для запуска токена.</li>
+        <li id="roadmap-item-2-2">- Проведение формального запуска на платформе мемпад Блюма.</li>
+        <li id="roadmap-item-2-3">- Организация мероприятия по запуску с участием членов сообщества.</li>
 
-    <script>
-        const languageSwitcher = document.getElementById('language-switcher');
+        <li id="roadmap-item-3">Этап 3: Привлечение заинтересованных участников в наше сообщество</li>
+        <li id="roadmap-item-3-1">- Создание контента, в том числе мемов, инфографики и видеоматериалов, для привлечения новой аудитории.</li>
+        <li id="roadmap-item-3-2">- Партнерство с крипто-инфлюенсерами для поддержки проекта.</li>
 
-        const translations = {
-            "ru": {
-                "about-link": "О проекте",
-                "videos-link": "Видео",
-                "community-link": "Сообщество",
-                "roadmap-link": "Дорожная карта",
-                "hero-title": "SIUU Token",
-                "hero-desc": "Мем-коин, вдохновленный легендарным Криштиану Роналду!",
-                "cta-btn": "Купить токен",
-                "about-heading": "О проекте",
-                "about-desc": "SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!",
-                "videos-heading": "Видео о проекте",
-                "community-heading": "Сообщество",
-                "community-desc": "Присоединяйтесь к нам в Telegram и Twitter!",
-                "roadmap-heading": "Дорожная карта",
-                "roadmap-list": [
-                    "1-й квартал 2024: Запуск проекта SIUU Token",
-                    "2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами",
-                    "3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях",
-                    "4-й квартал 2024: Обновления и расширение функционала проекта"
-                ]
-            },
-            "en": {
-                "about-link": "About Project",
-                "videos-link": "Videos",
-                "community-link": "Community",
-                "roadmap-link": "Roadmap",
-                "hero-title": "SIUU Token",
-                "hero-desc": "A meme coin inspired by the legendary Cristiano Ronaldo!",
-                "cta-btn": "Buy Token",
-                "about-heading": "About the Project",
-                "about-desc": "SIUU Token combines cryptocurrency and football spirit. This meme coin is made for fans of Cristiano Ronaldo who want to be part of something big!",
-                "videos-heading": "Videos about the Project",
-                "community-heading": "Community",
-                "community-desc": "Join us on Telegram and Twitter!",
-                "roadmap-heading": "Roadmap",
-                "roadmap-list": [
-                    "Q1 2024: SIUU Token Project Launch",
-                    "Q2 2024: Community growth and partnership with crypto exchanges",
-                    "Q3 2024: Marketing strategy and increasing presence on social media",
-                    "Q4 2024: Updates and expanding project features"
-                ]
-            }
-        };
+        <li id="roadmap-item-4">Этап 4: Регистрация на Ston.Fi</li>
+        <li id="roadmap-item-4-1">- Проведение необходимых действий для регистрации токена SIUU на платформе Ston.Fi.</li>
+        <li id="roadmap-item-4-2">- Анонсирование регистрации для привлечения внимания инвесторов.</li>
 
-        let currentLanguage = "ru";
+        <li id="roadmap-item-5">Этап 5: Оплата за Dex Screener</li>
+        <li id="roadmap-item-5-1">- Определение и оплата всех необходимых сборов для листинга на Dex Screener.</li>
+        <li id="roadmap-item-5-2">- Обеспечение доставки информации по токену для повышения видимости на платформе.</li>
 
-        function switchLanguage() {
-            currentLanguage = currentLanguage === "ru" ? "en" : "ru";
+        <li id="roadmap-item-6">Этап 6: Создание сайта и приложения WebApp</li>
+        <li id="roadmap-item-6-1">- Разработка пользовательского интерфейса сайта с информацией о проекте, дорожной карте и команде.</li>
+        <li id="roadmap-item-6-2">- Разработка мобильного приложения WebApp для удобного доступа к информации и функциям токена.</li>
+        <li id="roadmap-item-6-3">- Запуск бета-версии приложения для тестирования и получения отзывов от сообщества.</li>
 
-            // Update all elements based on current language
-            for (const [key, value] of Object.entries(translations[currentLanguage])) {
-                if (Array.isArray(value)) {
-                    const list = document.getElementById(key);
-                    list.innerHTML = '';
-                    value.forEach(item => {
-                        const li = document.createElement('li');
-                        li.textContent = item;
-                        list.appendChild(li);
-                    });
-                } else {
-                    document.getElementById(key).textContent = value;
-                }
-            }
+        <li id="roadmap-item-7">Этап 7: Достижение капитализации в $100,000</li>
+        <li id="roadmap-item-7-1">- Маркетинговая кампания для привлечения инвесторов с целью достижения капитализации.</li>
+        <li id="roadmap-item-7-2">- Регулярный анализ ключевых показателей успеха и корректировка стратегии по мере необходимости.</li>
+        <li id="roadmap-item-7-3">- Коммуникация с сообществом о достигнутых успехах и дальнейших планах по развитию проекта.</li>
+        <li id="roadmap-item-7-4">- Запуск реферальной программы для членов сообщества.</li>
+    </ul>
+</section>
+
+<!-- Футер -->
+<footer>
+    <p>&copy; 2024 SIUU Token. Все права защищены.</p>
+</footer>
+
+<script>
+    const languageSwitcher = document.getElementById('language-switcher');
+
+    const translations = {
+        "ru": {
+            "roadmap-heading": "Дорожная карта",
+            "roadmap-items": [
+                "Этап 1: Создание сообщества",
+                "- Создание официальных каналов в социальных сетях.",
+                "- Запуск первой кампании по привлечению подписчиков и формированию первоначального сообщества.",
+                "Этап 2: Честный запуск монеты на мемпаде Блюма",
+                "- Подготовка всех необходимых материалов и документации для запуска токена.",
+                "- Проведение формального запуска на платформе мемпад Блюма.",
+                "- Организация мероприятия по запуску с участием членов сообщества.",
+                "Этап 3: Привлечение заинтересованных участников в наше сообщество",
+                "- Создание контента, в том числе мемов, инфографики и видеоматериалов, для привлечения новой аудитории.",
+                "- Партнерство с крипто-инфлюенсерами для поддержки проекта.",
+                "Этап 4: Регистрация на Ston.Fi",
+                "- Проведение необходимых действий для регистрации токена SIUU на платформе Ston.Fi.",
+                "- Анонсирование регистрации для привлечения внимания инвесторов.",
+                "Этап 5: Оплата за Dex Screener",
+                "- Определение и оплата всех необходимых сборов для листинга на Dex Screener.",
+                "- Обеспечение доставки информации по токену для повышения видимости на платформе.",
+                "Этап 6: Создание сайта и приложения WebApp",
+                "- Разработка пользовательского интерфейса сайта с информацией о проекте, дорожной карте и команде.",
+                "- Разработка мобильного приложения WebApp для удобного доступа к информации и функциям токена.",
+                "- Запуск бета-версии приложения для тестирования и получения отзывов от сообщества.",
+                "Этап 7: Достижение капитализации в $100,000",
+                "- Маркетинговая кампания для привлечения инвесторов с целью достижения капитализации.",
+                "- Регулярный анализ ключевых показателей успеха и корректировка стратегии по мере необходимости.",
+                "- Коммуникация с сообществом о достигнутых успехах и дальнейших планах по развитию проекта.",
+                "- Запуск реферальной программы для членов сообщества."
+            ],
+            "about-link": "О проекте",
+            "videos-link": "Видео",
+            "community-link": "Сообщество",
+            "roadmap-link": "Дорожная карта",
+            "hero-title": "SIUU Token",
+            "hero-desc": "Мем-коин, вдохновленный легендарным Криштиану Роналду!",
+            "cta-btn": "Купить токен",
+            "about-heading": "О проекте",
+            "about-desc": "SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!",
+            "videos-heading": "Видео о проекте",
+            "community-heading": "Сообщество",
+            "community-desc": "Присоединяйтесь к нам в Telegram и Twitter!",
+            "roadmap-list": [
+                "1-й квартал 2024: Запуск проекта SIUU Token",
+                "2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами",
+                "3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях",
+                "4-й квартал 2024: Обновления и расширение функционала проекта"
+            ]
+        },
+        "en": {
+            "roadmap-heading": "Roadmap",
+            "roadmap-items": [
+                "Stage 1: Community Building",
+                "- Creating official social media channels.",
+                "- Launching the first campaign to attract subscribers and build an initial community.",
+                "Stage 2: Fair Launch of the Token on Blum's Memepad",
+                "- Preparing all necessary materials and documentation for the token launch.",
+                "- Conducting a formal launch on the Blum Memepad platform.",
+                "- Organizing a launch event with community members.",
+                "Stage 3: Attracting Engaged Participants to Our Community",
+                "- Creating content, including memes, infographics, and videos, to attract a new audience.",
+                "- Partnering with crypto influencers to support the project.",
+                "Stage 4: Registration on Ston.Fi",
+                "- Performing necessary actions to register the SIUU token on the Ston.Fi platform.",
+                "- Announcing the registration to attract investor attention.",
+                "Stage 5: Payment for Dex Screener",
+                "- Identifying and paying all necessary fees for Dex Screener listing.",
+                "- Ensuring token information delivery to enhance visibility on the platform.",
+                "Stage 6: Website and WebApp Creation",
+                "- Developing a user-friendly website interface with project information, roadmap, and team details.",
+                "- Developing a mobile WebApp for easy access to token information and features.",
+                "- Launching a beta version of the app for testing and community feedback.",
+                "Stage 7: Achieving $100,000 Capitalization",
+                "- Marketing campaign to attract investors to achieve capitalization.",
+                "- Regular analysis of key success metrics and strategy adjustment as needed.",
+                "- Communicating achievements and future plans with the community.",
+                "- Launching a referral program for community members."
+            ],
+            "about-link": "About Project",
+            "videos-link": "Videos",
+            "community-link": "Community",
+            "roadmap-link": "Roadmap",
+            "hero-title": "SIUU Token",
+            "hero-desc": "A meme coin inspired by the legendary Cristiano Ronaldo!",
+            "cta-btn": "Buy Token",
+            "about-heading": "About the Project",
+            "about-desc": "SIUU Token combines cryptocurrency and football spirit. This meme coin is made for fans of Cristiano Ronaldo who want to be part of something big!",
+            "videos-heading": "Videos about the Project",
+            "community-heading": "Community",
+            "community-desc": "Join us on Telegram and Twitter!",
+            "roadmap-list": [
+                "Q1 2024: SIUU Token Project Launch",
+                "Q2 2024: Community growth and partnership with crypto exchanges",
+                "Q3 2024: Marketing strategy and increasing presence on social media",
+                "Q4 2024: Updates and expanding project features"
+            ]
         }
+    };
 
-        languageSwitcher.addEventListener('click', switchLanguage);
-    </script>
+    let currentLanguage = "ru";
+
+    function switchLanguage() {
+    currentLanguage = currentLanguage === "ru" ? "en" : "ru";
+
+    // Update the heading and the roadmap list
+    document.getElementById('roadmap-heading').textContent = translations[currentLanguage]["roadmap-heading"];
+    
+    const roadmapList = document.getElementById('roadmap-list');
+    roadmapList.innerHTML = '';
+
+    translations[currentLanguage]["roadmap-items"].forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        roadmapList.appendChild(li);
+    });
+
+    // Update other text elements in the main content
+    document.getElementById('about-heading').textContent = translations[currentLanguage]["about-heading"];
+    document.getElementById('about-desc').textContent = translations[currentLanguage]["about-desc"];
+    document.getElementById('videos-heading').textContent = translations[currentLanguage]["videos-heading"];
+    document.getElementById('community-heading').textContent = translations[currentLanguage]["community-heading"];
+    document.getElementById('community-desc').textContent = translations[currentLanguage]["community-desc"];
+
+    // Update the navigation links
+    document.getElementById('about-link').textContent = translations[currentLanguage]["about-link"];
+    document.getElementById('videos-link').textContent = translations[currentLanguage]["videos-link"];
+    document.getElementById('community-link').textContent = translations[currentLanguage]["community-link"];
+    document.getElementById('roadmap-link').textContent = translations[currentLanguage]["roadmap-link"];
+    
+    // Update the hero section and call-to-action button
+    document.getElementById('hero-title').textContent = translations[currentLanguage]["hero-title"];
+    document.getElementById('hero-desc').textContent = translations[currentLanguage]["hero-desc"];
+    document.getElementById('cta-btn').textContent = translations[currentLanguage]["cta-btn"];
+}
+
+    languageSwitcher.addEventListener('click', switchLanguage);
+</script>
 </body>
 </html>

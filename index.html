@@ -1,688 +1,325 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="SIUU Token — криптовалюта, вдохновленная Криштиану Роналду. Присоединяйтесь к нашему сообществу!">
-    <meta name="keywords" content="SIUU Token, криптовалюта, мем-коин, Роналду, футбол, крипта, блокчейн">
-    <title>SIUU Token</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Общие настройки и стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0; /* Уменьшен отступ */
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-}
-
-header .logo {
-    text-align: center;
-    font-size: 2em; /* Уменьшен размер шрифта */
-    color: #00acee;
-    font-family: 'Pacifico', cursive;
-    white-space: nowrap; /* Запрещено переноса текста */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Добавляет многоточие, если текст не вмещается */
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1em; /* Уменьшен размер шрифта */
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Запрещено переноса текста */
-}
-
-header nav a:hover {
-    color: #1da1f2;
-}
-
-/* Блок героя с фоном */
-.hero {
-    height: 100vh;
-    background: url('https://media.giphy.com/media/HLFT2TJWh7jssTLB2W/giphy.gif') center no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3.5em; /* Уменьшен размер шрифта */
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-}
-
-.hero p {
-    font-size: 1.4em; /* Уменьшен размер шрифта */
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-.cta-btn {
-    margin-top: 20px;
-    background: #00acee;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-}
-
-.cta-btn:hover {
-    background-color: #1da1f2;
-    transform: scale(1.1);
-}
-
-section {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2.5em;
-    color: #00acee;
-    margin-bottom: 20px;
-}
-
-section p {
-    font-size: 1.2em;
-    color: #ccc;
-}
-
-iframe {
-    margin-top: 20px;
-    width: 80%;
-    max-width: 800px;
-    height: 450px;
-    border: none;
-    border-radius: 10px;
-}
-
-footer {
-    padding: 30px 20px;
-    background: #1e1e1e;
-    text-align: center;
-    color: #fff;
-}
-
-footer p {
-    font-size: 1.2em;
-}
-
-/* Дорожная карта */
-#roadmap {
-    background-color: #1e1e1e;
-    padding: 50px 20px;
-}
-
-#roadmap h2 {
-    font-size: 2.5em;
-    color: #00acee;
-    margin-bottom: 30px;
-}
-
-#roadmap ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-#roadmap ul li {
-    font-size: 1.2em;
-    color: #ccc;
-    margin-bottom: 20px;
-}
-
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAUL — Мемкоин с реальной ценностью</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: url("https://images.unsplash.com/photo-1627483264888-8f1d00e8a87d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+      /* Замените на подходящее фоновое изображение */
+      background-size: cover;
     }
 
-    .hero p {
-        font-size: 1.2em; /* Уменьшен размер шрифта для мобильных устройств */
+    header {
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cta-btn {
-        font-size: 1em;
-        padding: 8px 16px;
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5em;
+      margin: 0;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+      /* Красный неоновый эффект */
+      animation: glitch 1s infinite;
     }
 
-    iframe {
-        width: 90%;
-        height: 300px;
+    @keyframes glitch {
+
+      0%,
+      20% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+      }
+
+      21%,
+      40% {
+        text-shadow: 2px 2px 5px #00ff00, 4px 4px 10px #00ff00, 6px 6px 15px #00ff00;
+        /* Зеленый неоновый эффект */
+      }
+
+      41%,
+      60% {
+        text-shadow: -2px -2px 5px #0000ff, -4px -4px 10px #0000ff, -6px -6px 15px #0000ff;
+        /* Синий неоновый эффект */
+      }
+
+      61%,
+      80% {
+        text-shadow: 2px -2px 5px #ffff00, 4px -4px 10px #ffff00, 6px -6px 15px #ffff00;
+        /* Желтый неоновый эффект */
+      }
+
+      81%,
+      100% {
+        text-shadow: -2px 2px 5px #ff00ff, -4px 2px 10px #ff00ff, -6px 2px 15px #ff00ff;
+        /* Фиолетовый неоновый эффект */
+      }
     }
 
-    /* Настройка фона для мобильных устройств */
-    .hero {
-        background-size: contain;
-        background-position: center center;
+    header p {
+      font-size: 1.8em;
+      margin: 10px 0 0;
+      color: #d1d1d1;
     }
 
-    /* Уменьшаем высоту блока hero на мобильных */
-    .hero {
-        height: 60vh;
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
     }
 
-    /* Переключатель языка */
-    #language-switcher {
-        font-size: 1.5em;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: transparent;
-        border: none;
-        color: #fff;
-        z-index: 1000;
+    .language-switcher a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      cursor: pointer;
     }
 
-    header .logo {
-        font-size: 1.5em; /* Уменьшен размер шрифта для мобильных */
+    .language-switcher a:hover {
+      color: #ff0000;
+      /* Красный цвет */
     }
 
-    header nav a {
-        font-size: 1em; /* Уменьшен размер шрифта для мобильных */
-        margin: 0 10px;
-  }
-  
-  /* Основные стили для кнопок социальных сетей */
-.social-btn {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.social-btn:hover {
-    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Добавляем тень */
-}
-
-/* Стили для кнопки Twitter */
-.twitter-btn {
-    background-color: #1da1f2; /* Цвет фона для Twitter */
-}
-
-.twitter-btn:hover {
-    background-color: #0d8de0; /* Темный цвет при наведении */
-}
-
-/* Стили для кнопки Telegram */
-.telegram-btn {
-    background-color: #0088cc; /* Цвет фона для Telegram */
-}
-
-.telegram-btn:hover {
-    background-color: #006fa2; /* Темный цвет при наведении */
-}
-   }/* Общие настройки и стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.header {
-    word-wrap: break-word; /* Разбивает длинные слова */
-    word-break: break-all; /* Разбивает слово в любом месте, если оно не помещается */
-}
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0; /* Уменьшен отступ */
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 10;
-}
-
-header .logo {
-    text-align: center;
-    font-size: 2em; /* Уменьшен размер шрифта */
-    color: #00acee;
-    font-family: 'Pacifico', cursive;
-    white-space: nowrap; /* Запрещено переноса текста */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Добавляет многоточие, если текст не вмещается */
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-header nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 1em; /* Уменьшен размер шрифта */
-    transition: color 0.3s ease;
-    white-space: nowrap; /* Запрещено переноса текста */
-}
-
-header nav a:hover {
-    color: #1da1f2;
-}
-
-/* Блок героя с фоном */
-.hero {
-    height: 100vh;
-    background: url('https://media.giphy.com/media/HLFT2TJWh7jssTLB2W/giphy.gif') center no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-.hero h1 {
-    font-size: 3.5em; /* Уменьшен размер шрифта */
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    position: relative;
-    z-index: 2;
-}
-
-.hero p {
-    font-size: 1.4em; /* Уменьшен размер шрифта */
-    color: #fff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 10px;
-    position: relative;
-    z-index: 2;
-}
-
-.cta-btn {
-    margin-top: 20px;
-    background: #00acee;
-    color: white;
-    font-size: 1.2em;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 2;
-}
-
-.cta-btn:hover {
-    background-color: #1da1f2;
-    transform: scale(1.1);
-}
-
-/* Основные стили для кнопок социальных сетей */
-.social-btn {
-    display: inline-block;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    color: #fff;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.social-btn:hover {
-    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Добавляем тень */
-}
-
-/* Стили для кнопки Twitter */
-.chat-btn {
-    background-color: #1da1f2; /* Цвет фона для Twitter */
-}
-
-.chat-btn:hover {
-    background-color: #0d8de0; /* Темный цвет при наведении */
-}
-
-/* Стили для кнопки Telegram */
-.telegram-btn {
-    background-color: #0088cc; /* Цвет фона для Telegram */
-}
-
-.telegram-btn:hover {
-    background-color: #006fa2; /* Темный цвет при наведении */
-}
-
-/* Адаптивные стили */
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em; /* Уменьшен размер шрифта для мобильных устройств */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center; /* Центрируем содержимое контейнера */
     }
 
-    .hero p {
-        font-size: 1.2em; /* Уменьшен размер шрифта для мобильных устройств */
+    h2 {
+      color: #ff0000;
+      /* Красный цвет */
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    .cta-btn {
-        font-size: 1em;
-        padding: 8px 16px;
+    p {
+      font-size: 1.2em;
+      color: #d1d1d1;
     }
 
-    iframe {
-        width: 90%;
-        height: 300px;
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
     }
 
-    /* Настройка фона для мобильных устройств */
-    .hero {
-        background-size: contain;
-        background-position: center center;
+    ul li {
+      background: rgba(255, 0, 0, 0.1);
+      /* Красный фон */
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #ff0000;
+      /* Красная рамка */
     }
 
-    /* Уменьшаем высоту блока hero на мобильных */
-    .hero {
-        height: 60vh;
+    .cta-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 20px 40px;
+      background-color: #ff0000;
+      /* Красный цвет */
+      color: #1a1a1a;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1.5em;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 10px #ff0000;
+      /* Красная тень */
     }
 
-    /* Переключатель языка */
-    #language-switcher {
-        font-size: 1.5em;
-        cursor: pointer;
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: transparent;
-        border: none;
-        color: #fff;
-        z-index: 1000;
+    .cta-button:hover {
+      background-color: #cc0000;
+      /* Более темный красный */
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff0000;
+      /* Красная тень */
     }
 
-    header .logo {
-        font-size: 1.5em; /* Уменьшен размер шрифта для мобильных */
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      margin-top: 60px;
     }
 
-    header nav a {
-        font-size: 1em; /* Уменьшен размер шрифта для мобильных */
-        margin: 0 10px;
+    footer a {
+      color: #ff0000;
+      /* Красный цвет */
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
-	
-	video {
-    width: 100%;
-    height: auto;
-}
 
+    footer a:hover {
+      color: #cc0000;
+      /* Более темный красный */
+    }
 
-    </style>
+    /* Адаптивность */
+    @media (max-width: 768px) {
+
+      /* ... */
+    }
+
+    /* Стили для значков соцсетей */
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ff0000;
+    }
+
+    .social-links img {
+      width: 30px;
+      height: 30px;
+    }
+    
+    /* Центрируем картинку */
+    .container img { 
+       display: block;
+       margin: 0 auto;
+     }
+  </style>
 </head>
+
 <body>
-    <!-- Переключатель языка -->
-    <button id="language-switcher">🌐</button>
+  <div class="language-switcher">
+    <a href="#" onclick="changeLanguage('ru'); return false;">Русский</a>
+    <a href="#" onclick="changeLanguage('en'); return false;">English</a>
+  </div>
 
-    <!-- Шапка -->
-    <header>
-        <div class="logo" id="logo">SIUU Token</div>
-        <nav>
-            <a href="#about" id="about-link">О проекте</a>
-            <a href="#videos" id="videos-link">Видео</a>
-            <a href="#community" id="community-link">Сообщество</a>
-            <a href="#roadmap" id="roadmap-link">Дорожная карта</a> <!-- Добавлена ссылка на Roadmap -->
-        </nav>
-    </header>
+  <header>
+    <h1 id="title">BAUL</h1>
+    <p id="subtitle">Мемкоин с реальной ценностью</p>
+  </header>
 
-    <!-- Блок героя -->
-    <section class="hero">
-        <h1 id="hero-title">SIUU Token</h1>
-        <p id="hero-desc">Мем-коин, вдохновленный легендарным Криштиану Роналду!</p>
-        <a href="https://t.me/blum/app?startapp=memepadjetton_SIUU_lJMSc-ref_woZdAdRvhH" class="cta-btn" id="cta-btn" target="_blank">Купить токен</a>
-    </section>
+  <div class="container">
+    <h2 id="about-title">О проекте</h2>
+    <p id="about-text">
+      BAUL — это не просто мемкоин, это символ перехода из мира шуток в реальный бизнес. Вдохновленный легендарной
+      клетчатой сумкой, BAUL станет проводником между криптовалютой и настоящими покупками.
+    </p>
 
-    <!-- Секция "О проекте" -->
-    <section id="about">
-        <h2 id="about-heading">О проекте</h2>
-        <p id="about-desc">SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!</p>
-    </section>
-
-    <!-- Секция "Видео" -->
-   <section id="videos">
-    <h2 id="videos-heading">Видео о проекте</h2>
-    <iframe src="https://giphy.com/embed/MciOOVjPJ2ELyYeCNR" width="100%" height="auto" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
-    <p><a href="https://giphy.com/gifs/MciOOVjPJ2ELyYeCNR"></a></p>
-</section>
-
-
-    <!-- Сообщество -->
-    <section id="community">
-        <h2 id="community-heading">Сообщество</h2>
-        <p id="community-desc">Присоединяйтесь к нам в Telegram и Twitter!</p>
-    <div>
-        <!-- Button for Chat Community -->
-        <a href="https://t.me/siuuCommunitytg" target="_blank" class="social-btn chat-btn">Chat Community</a>
-
-        <!-- Button for Telegram channel -->
-        <a href="https://t.me/game_doc" target="_blank" class="social-btn telegram-btn">Telegram</a>
-    </div>
-    </section>
-
-    <!-- Дорожная карта -->
-<section id="roadmap">
-    <h2 id="roadmap-heading">Дорожная карта</h2>
-    <ul id="roadmap-list">
-        <li id="roadmap-item-1">Этап 1: Создание сообщества</li>
-        <li id="roadmap-item-1-1">- Создание официальных каналов в социальных сетях.</li>
-        <li id="roadmap-item-1-2">- Запуск первой кампании по привлечению подписчиков и формированию первоначального сообщества.</li>
-
-        <li id="roadmap-item-2">Этап 2: Честный запуск монеты на мемпаде Блюма</li>
-        <li id="roadmap-item-2-1">- Подготовка всех необходимых материалов и документации для запуска токена.</li>
-        <li id="roadmap-item-2-2">- Проведение формального запуска на платформе мемпад Блюма.</li>
-        <li id="roadmap-item-2-3">- Организация мероприятия по запуску с участием членов сообщества.</li>
-
-        <li id="roadmap-item-3">Этап 3: Привлечение заинтересованных участников в наше сообщество</li>
-        <li id="roadmap-item-3-1">- Создание контента, в том числе мемов, инфографики и видеоматериалов, для привлечения новой аудитории.</li>
-        <li id="roadmap-item-3-2">- Партнерство с крипто-инфлюенсерами для поддержки проекта.</li>
-
-        <li id="roadmap-item-4">Этап 4: Регистрация на Ston.Fi</li>
-        <li id="roadmap-item-4-1">- Проведение необходимых действий для регистрации токена SIUU на платформе Ston.Fi.</li>
-        <li id="roadmap-item-4-2">- Анонсирование регистрации для привлечения внимания инвесторов.</li>
-
-        <li id="roadmap-item-5">Этап 5: Оплата за Dex Screener</li>
-        <li id="roadmap-item-5-1">- Определение и оплата всех необходимых сборов для листинга на Dex Screener.</li>
-        <li id="roadmap-item-5-2">- Обеспечение доставки информации по токену для повышения видимости на платформе.</li>
-
-        <li id="roadmap-item-6">Этап 6: Создание сайта и приложения WebApp</li>
-        <li id="roadmap-item-6-1">- Разработка пользовательского интерфейса сайта с информацией о проекте, дорожной карте и команде.</li>
-        <li id="roadmap-item-6-2">- Разработка мобильного приложения WebApp для удобного доступа к информации и функциям токена.</li>
-        <li id="roadmap-item-6-3">- Запуск бета-версии приложения для тестирования и получения отзывов от сообщества.</li>
-
-        <li id="roadmap-item-7">Этап 7: Достижение капитализации в $100,000</li>
-        <li id="roadmap-item-7-1">- Маркетинговая кампания для привлечения инвесторов с целью достижения капитализации.</li>
-        <li id="roadmap-item-7-2">- Регулярный анализ ключевых показателей успеха и корректировка стратегии по мере необходимости.</li>
-        <li id="roadmap-item-7-3">- Коммуникация с сообществом о достигнутых успехах и дальнейших планах по развитию проекта.</li>
-        <li id="roadmap-item-7-4">- Запуск реферальной программы для членов сообщества.</li>
+    <h2 id="why-title">Почему BAUL?</h2>
+    <ul id="why-list">
+      <li>Крипта, за которую можно купить стиль: В будущем BAUL будет привязан к магазину сумок премиум-брендов.</li>
+      <li>Символ доступности и роскоши: Мы соединяем народную энергию и дух высокой моды.</li>
     </ul>
-</section>
 
-<!-- Футер -->
-<footer>
-    <p>&copy; 2024 SIUU Token. Все права защищены.</p>
-</footer>
+    <a href="https://ibb.co/VmLYwPC">
+      <img src="https://i.ibb.co/VmLYwPC/baul-fotor-bg-remover-2025012122506.png" alt="baul-fotor-bg-remover-2025012122506" border="0">
+    </a>
 
-<script>
-    const languageSwitcher = document.getElementById('language-switcher');
+    <h2 id="join-title">Присоединяйтесь к нам!</h2>
+    <p id="join-text">
+      Станьте частью сообщества BAUL уже сегодня, чтобы завтра оплачивать стильные покупки!
+    </p>
+    <a href="#" class="cta-button" id="cta-button">Купить BAUL</a>
+  </div>
 
+  <footer>
+    <p id="footer-text">&copy; 2023 BAUL. Все права защищены.</p>
+    <p><a href="#" id="privacy-link">Политика конфиденциальности</a> | <a href="#" id="terms-link">Условия
+        использования</a></p>
+
+    <div class="social-links">
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png" alt="Discord"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png" alt="TikTok"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <script>
     const translations = {
-        "ru": {
-            "roadmap-heading": "Дорожная карта",
-            "roadmap-items": [
-                "Этап 1: Запуск на мемпаде Блюма",
-                "Этап 2: Создание соцсетей",
-                "Этап 3: Партнерство с инфлюенсерами",
-                "Этап 4: Регистрация на Ston.Fi",
-                "Этап 5: Листинг на Dex Screener",
-                "Этап 6: Разработка Mini App и WebApp",
-                "Этап 7: Достижение $100,000 капитализации",
-                "Этап 8: Привлечение медийных лиц",
-                "Этап 9: Coming soon"
-            ],
-            // Остальные переводы остаются без изменений
-            "about-link": "О проекте",
-            "videos-link": "Видео",
-            "community-link": "Сообщество",
-            "roadmap-link": "Дорожная карта",
-            "hero-title": "SIUU Token",
-            "hero-desc": "Мем-коин, вдохновленный легендарным Криштиану Роналду!",
-            "cta-btn": "Купить токен",
-            "about-heading": "О проекте",
-            "about-desc": "SIUU Token объединяет криптовалюту и дух футбола. Этот мем-коин создан для фанатов Криштиану Роналду, которые хотят быть частью чего-то великого!",
-            "videos-heading": "Видео о проекте",
-            "community-heading": "Сообщество",
-            "community-desc": "Присоединяйтесь к нам в Telegram и Twitter!",
-            "roadmap-list": [
-                "1-й квартал 2024: Запуск проекта SIUU Token",
-                "2-й квартал 2024: Развитие сообщества и сотрудничество с криптовалютными биржами",
-                "3-й квартал 2024: Стратегия маркетинга и увеличения присутствия в соцсетях",
-                "4-й квартал 2024: Обновления и расширение функционала проекта"
-            ]
-        },
-        "en": {
-            "roadmap-heading": "Roadmap",
-            "roadmap-items": [
-                "Stage 1: Launch on Blum's Memepad",
-                "Stage 2: Creating Social Media",
-                "Stage 3: Partnership with Influencers",
-                "Stage 4: Registration on Ston.Fi",
-                "Stage 5: Listing on Dex Screener",
-                "Stage 6: Development of Mini App and WebApp",
-                "Stage 7: Achieving $100,000 Capitalization",
-                "Stage 8: Attracting Media Figures",
-                "Stage 9: Coming soon"
-            ],
-            // Остальные переводы остаются без изменений
-            "about-link": "About Project",
-            "videos-link": "Videos",
-            "community-link": "Community",
-            "roadmap-link": "Roadmap",
-            "hero-title": "SIUU Token",
-            "hero-desc": "A meme coin inspired by the legendary Cristiano Ronaldo!",
-            "cta-btn": "Buy Token",
-            "about-heading": "About the Project",
-            "about-desc": "SIUU Token combines cryptocurrency and football spirit. This meme coin is made for fans of Cristiano Ronaldo who want to be part of something big!",
-            "videos-heading": "Videos about the Project",
-            "community-heading": "Community",
-            "community-desc": "Join us on Telegram and Twitter!",
-            "roadmap-list": [
-                "Q1 2024: SIUU Token Project Launch",
-                "Q2 2024: Community growth and partnership with crypto exchanges",
-                "Q3 2024: Marketing strategy and increasing presence on social media",
-                "Q4 2024: Updates and expanding project features"
-            ]
-        }
+      ru: {
+        title: "BAUL",
+        subtitle: "Мемкоин с реальной ценностью",
+        aboutTitle: "О проекте",
+        aboutText: "BAUL — это не просто мемкоин, это символ перехода из мира шуток в реальный бизнес. Вдохновленный легендарной клетчатой сумкой, BAUL станет проводником между криптовалютой и настоящими покупками.",
+        whyTitle: "Почему BAUL?",
+        whyList: [
+          "Крипта, за которую можно купить стиль: В будущем BAUL будет привязан к магазину сумок премиум-брендов.",
+          "Символ доступности и роскоши: Мы соединяем народную энергию и дух высокой моды."
+        ],
+        joinTitle: "Присоединяйтесь к нам!",
+        joinText: "Станьте частью сообщества BAUL уже сегодня, чтобы завтра оплачивать стильные покупки!",
+        ctaButton: "Купить BAUL",
+        footerText: "&copy; 2023 BAUL. Все права защищены.",
+        privacyLink: "Политика конфиденциальности",
+        termsLink: "Условия использования"
+      },
+      en: {
+        title: "BAUL",
+        subtitle: "Meme Coin with Real Value",
+        aboutTitle: "About the Project",
+        aboutText: "BAUL is not just a meme coin, it's a symbol of the transition from jokes to real business. Inspired by the legendary checkered bag, BAUL will become a bridge between cryptocurrency and real purchases.",
+        whyTitle: "Why BAUL?",
+        whyList: [
+          "Crypto you can buy style with: In the future, BAUL will be linked to a store of premium brand bags.",
+          "A symbol of accessibility and luxury: We combine the energy of the people and the spirit of high fashion."
+        ],
+        joinTitle: "Join Us!",
+        joinText: "Become part of the BAUL community today to pay for stylish purchases tomorrow!",
+        ctaButton: "Buy BAUL",
+        footerText: "&copy; 2023 BAUL. All rights reserved.",
+        privacyLink: "Privacy Policy",
+        termsLink: "Terms of Use"
+      }
     };
 
-    let currentLanguage = "ru";
-
-    function switchLanguage() {
-    currentLanguage = currentLanguage === "ru" ? "en" : "ru";
-
-    // Update the heading and the roadmap list
-    document.getElementById('roadmap-heading').textContent = translations[currentLanguage]["roadmap-heading"];
-    
-    const roadmapList = document.getElementById('roadmap-list');
-    roadmapList.innerHTML = '';
-
-    translations[currentLanguage]["roadmap-items"].forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = item;
-        roadmapList.appendChild(li);
-    });
-
-    // Update other text elements in the main content
-    document.getElementById('about-heading').textContent = translations[currentLanguage]["about-heading"];
-    document.getElementById('about-desc').textContent = translations[currentLanguage]["about-desc"];
-    document.getElementById('videos-heading').textContent = translations[currentLanguage]["videos-heading"];
-    document.getElementById('community-heading').textContent = translations[currentLanguage]["community-heading"];
-    document.getElementById('community-desc').textContent = translations[currentLanguage]["community-desc"];
-
-    // Update the navigation links
-    document.getElementById('about-link').textContent = translations[currentLanguage]["about-link"];
-    document.getElementById('videos-link').textContent = translations[currentLanguage]["videos-link"];
-    document.getElementById('community-link').textContent = translations[currentLanguage]["community-link"];
-    document.getElementById('roadmap-link').textContent = translations[currentLanguage]["roadmap-link"];
-    
-    // Update the hero section and call-to-action button
-    document.getElementById('hero-title').textContent = translations[currentLanguage]["hero-title"];
-    document.getElementById('hero-desc').textContent = translations[currentLanguage]["hero-desc"];
-    document.getElementById('cta-btn').textContent = translations[currentLanguage]["cta-btn"];
-}
-
-    languageSwitcher.addEventListener('click', switchLanguage);
-</script>
+    function changeLanguage(lang) {
+      document.getElementById('title').textContent = translations[lang].title;
+      document.getElementById('subtitle').textContent = translations[lang].subtitle;
+      document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+      document.getElementById('about-text').textContent = translations[lang].aboutText;
+      document.getElementById('why-title').textContent = translations[lang].whyTitle;
+      document.getElementById('why-list').innerHTML = translations[lang].whyList.map(item => `<li>${item}</li>`).join('');
+      document.getElementById('join-title').textContent = translations[lang].joinTitle;
+      document.getElementById('join-text').textContent = translations[lang].joinText;
+      document.getElementById('cta-button').textContent = translations[lang].ctaButton;
+      document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+      document.getElementById('privacy-link').textContent = translations[lang].privacyLink;
+      document.getElementById('terms-link').textContent = translations[lang].termsLink;
+    }
+  </script>
 </body>
+
 </html>

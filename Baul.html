@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAUL — Мемкоин с реальной ценностью</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1a1a1a;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: url("https://images.unsplash.com/photo-1627483264888-8f1d00e8a87d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+      /* Замените на подходящее фоновое изображение */
+      background-size: cover;
+    }
+
+    header {
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 5em;
+      margin: 0;
+      color: #ffffff;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+      /* Красный неоновый эффект */
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+
+      0%,
+      20% {
+        text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+      }
+
+      21%,
+      40% {
+        text-shadow: 2px 2px 5px #00ff00, 4px 4px 10px #00ff00, 6px 6px 15px #00ff00;
+        /* Зеленый неоновый эффект */
+      }
+
+      41%,
+      60% {
+        text-shadow: -2px -2px 5px #0000ff, -4px -4px 10px #0000ff, -6px -6px 15px #0000ff;
+        /* Синий неоновый эффект */
+      }
+
+      61%,
+      80% {
+        text-shadow: 2px -2px 5px #ffff00, 4px -4px 10px #ffff00, 6px -6px 15px #ffff00;
+        /* Желтый неоновый эффект */
+      }
+
+      81%,
+      100% {
+        text-shadow: -2px 2px 5px #ff00ff, -4px 2px 10px #ff00ff, -6px 2px 15px #ff00ff;
+        /* Фиолетовый неоновый эффект */
+      }
+    }
+
+    header p {
+      font-size: 1.8em;
+      margin: 10px 0 0;
+      color: #d1d1d1;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    .language-switcher a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .language-switcher a:hover {
+      color: #ff0000;
+      /* Красный цвет */
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center; /* Центрируем содержимое контейнера */
+    }
+
+    h2 {
+      color: #ff0000;
+      /* Красный цвет */
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #d1d1d1;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+
+    ul li {
+      background: rgba(255, 0, 0, 0.1);
+      /* Красный фон */
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #ff0000;
+      /* Красная рамка */
+    }
+
+    .cta-button {
+      display: inline-block;
+      margin: 20px 0;
+      padding: 20px 40px;
+      background-color: #ff0000;
+      /* Красный цвет */
+      color: #1a1a1a;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 1.5em;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 10px #ff0000;
+      /* Красная тень */
+    }
+
+    .cta-button:hover {
+      background-color: #cc0000;
+      /* Более темный красный */
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #ff0000;
+      /* Красная тень */
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+      margin-top: 60px;
+    }
+
+    footer a {
+      color: #ff0000;
+      /* Красный цвет */
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    footer a:hover {
+      color: #cc0000;
+      /* Более темный красный */
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+
+      /* ... */
+    }
+
+    /* Стили для значков соцсетей */
+    .social-links {
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 10px;
+      color: white;
+      transition: color 0.3s ease;
+    }
+
+    .social-links a:hover {
+      color: #ff0000;
+    }
+
+    .social-links img {
+      width: 30px;
+      height: 30px;
+    }
+    
+    /* Центрируем картинку */
+    .container img { 
+       display: block;
+       margin: 0 auto;
+     }
+  </style>
+</head>
+
+<body>
+  <div class="language-switcher">
+    <a href="#" onclick="changeLanguage('ru'); return false;">Русский</a>
+    <a href="#" onclick="changeLanguage('en'); return false;">English</a>
+  </div>
+
+  <header>
+    <h1 id="title">BAUL</h1>
+    <p id="subtitle">Мемкоин с реальной ценностью</p>
+  </header>
+
+  <div class="container">
+    <h2 id="about-title">О проекте</h2>
+    <p id="about-text">
+      BAUL — это не просто мемкоин, это символ перехода из мира шуток в реальный бизнес. Вдохновленный легендарной
+      клетчатой сумкой, BAUL станет проводником между криптовалютой и настоящими покупками.
+    </p>
+
+    <h2 id="why-title">Почему BAUL?</h2>
+    <ul id="why-list">
+      <li>Крипта, за которую можно купить стиль: В будущем BAUL будет привязан к магазину сумок премиум-брендов.</li>
+      <li>Символ доступности и роскоши: Мы соединяем народную энергию и дух высокой моды.</li>
+    </ul>
+
+    <a href="https://ibb.co/VmLYwPC">
+      <img src="https://i.ibb.co/VmLYwPC/baul-fotor-bg-remover-2025012122506.png" alt="baul-fotor-bg-remover-2025012122506" border="0">
+    </a>
+
+    <h2 id="join-title">Присоединяйтесь к нам!</h2>
+    <p id="join-text">
+      Станьте частью сообщества BAUL уже сегодня, чтобы завтра оплачивать стильные покупки!
+    </p>
+    <a href="#" class="cta-button" id="cta-button">Купить BAUL</a>
+  </div>
+
+  <footer>
+    <p id="footer-text">&copy; 2023 BAUL. Все права защищены.</p>
+    <p><a href="#" id="privacy-link">Политика конфиденциальности</a> | <a href="#" id="terms-link">Условия
+        использования</a></p>
+
+    <div class="social-links">
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/twitter.png" alt="Twitter"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/discord-logo.png" alt="Discord"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/telegram-app.png" alt="Telegram"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok--v1.png" alt="TikTok"></a>
+      <a href="#" target="_blank"><img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram"></a>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      ru: {
+        title: "BAUL",
+        subtitle: "Мемкоин с реальной ценностью",
+        aboutTitle: "О проекте",
+        aboutText: "BAUL — это не просто мемкоин, это символ перехода из мира шуток в реальный бизнес. Вдохновленный легендарной клетчатой сумкой, BAUL станет проводником между криптовалютой и настоящими покупками.",
+        whyTitle: "Почему BAUL?",
+        whyList: [
+          "Крипта, за которую можно купить стиль: В будущем BAUL будет привязан к магазину сумок премиум-брендов.",
+          "Символ доступности и роскоши: Мы соединяем народную энергию и дух высокой моды."
+        ],
+        joinTitle: "Присоединяйтесь к нам!",
+        joinText: "Станьте частью сообщества BAUL уже сегодня, чтобы завтра оплачивать стильные покупки!",
+        ctaButton: "Купить BAUL",
+        footerText: "&copy; 2023 BAUL. Все права защищены.",
+        privacyLink: "Политика конфиденциальности",
+        termsLink: "Условия использования"
+      },
+      en: {
+        title: "BAUL",
+        subtitle: "Meme Coin with Real Value",
+        aboutTitle: "About the Project",
+        aboutText: "BAUL is not just a meme coin, it's a symbol of the transition from jokes to real business. Inspired by the legendary checkered bag, BAUL will become a bridge between cryptocurrency and real purchases.",
+        whyTitle: "Why BAUL?",
+        whyList: [
+          "Crypto you can buy style with: In the future, BAUL will be linked to a store of premium brand bags.",
+          "A symbol of accessibility and luxury: We combine the energy of the people and the spirit of high fashion."
+        ],
+        joinTitle: "Join Us!",
+        joinText: "Become part of the BAUL community today to pay for stylish purchases tomorrow!",
+        ctaButton: "Buy BAUL",
+        footerText: "&copy; 2023 BAUL. All rights reserved.",
+        privacyLink: "Privacy Policy",
+        termsLink: "Terms of Use"
+      }
+    };
+
+    function changeLanguage(lang) {
+      document.getElementById('title').textContent = translations[lang].title;
+      document.getElementById('subtitle').textContent = translations[lang].subtitle;
+      document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+      document.getElementById('about-text').textContent = translations[lang].aboutText;
+      document.getElementById('why-title').textContent = translations[lang].whyTitle;
+      document.getElementById('why-list').innerHTML = translations[lang].whyList.map(item => `<li>${item}</li>`).join('');
+      document.getElementById('join-title').textContent = translations[lang].joinTitle;
+      document.getElementById('join-text').textContent = translations[lang].joinText;
+      document.getElementById('cta-button').textContent = translations[lang].ctaButton;
+      document.getElementById('footer-text').innerHTML = translations[lang].footerText;
+      document.getElementById('privacy-link').textContent = translations[lang].privacyLink;
+      document.getElementById('terms-link').textContent = translations[lang].termsLink;
+    }
+  </script>
+</body>
+
+</html>
